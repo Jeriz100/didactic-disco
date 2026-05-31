@@ -1,1 +1,32 @@
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+       <link rel="stylesheet" href="./100.css">
+   <title>Evie's Web</title>
+   </head>
+   <h1 style="color:#1a2b4c;text-align:center;">CATEGORIES</h1>
+   <body style="background:b2cccf;">
+      <div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px; margin-top: 10px; padding-left: 20px;">
+    <button onclick="document.getElementById('loader1').style.display = 'block'; setTimeout(() => { window.location.href='200.html' }, 2000);" style="background: orange; color: #1a2b4c; padding: 10px; border-radius: 10px; border: none;box-shadow:0 3px 0 gray; font-weight: bold; cursor: pointer;">ANTONYMS-></button>
+    <div id="loader1" style="width: 18px; height: 18px; border: 3px solid rgba(255, 255, 255, 0.2); border-top: 3px solid orange; border-radius: 50%; animation: spin 2s linear infinite; display: none;"></div>
+ </div>
+    <div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px; margin-top: 10px; padding-left: 20px;">
+    <button onclick="document.getElementById('loader2').style.display = 'block'; setTimeout(() => { window.location.href='300.html' }, 2000);" style="background: orange; color: #1a2b4c; padding: 10px; border-radius: 10px; border: none;box-shadow:0 3px 0 gray; font-weight: bold; cursor: pointer;">SYNONYMS-></button>
+    <div id="loader2" style="width: 18px; height: 18px; border: 3px solid rgba(255, 255, 255, 0.2); border-top: 3px solid orange; border-radius: 50%; animation: spin 2s linear infinite; display: none;"></div>
+</div>
+<div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px; margin-top: 10px; padding-left: 20px;">
+    <button onclick="document.getElementById('loader3').style.display = 'block'; setTimeout(() => { window.location.href='400.html' }, 2000);" style="background: orange; color: #1a2b4c; padding: 10px; border-radius: 10px; border: none; font-weight: bold;box-shadow:0 3px 0 gray; cursor: pointer;">PUNCTUATIONS-></button>
+    <div id="loader3" style="width: 18px; height: 18px; border: 3px solid rgba(255, 255, 255, 0.2); border-top: 3px solid orange; border-radius: 50%; animation: spin 2s linear infinite; display: none;"></div>
+</div>
+<div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px; margin-top: 10px; padding-left: 20px;">
+    <button onclick="document.getElementById('loader4').style.display = 'block'; setTimeout(() => { window.location.href='500.html' }, 2000);" style="background: orange; color: #1a2b4c; padding: 10px; border-radius: 10px; border: none; font-weight: bold;box-shadow:0 3px 0 gray; cursor: pointer;">BEST COMPLETES-></button>
+    <div id="loader4" style="width: 18px; height: 18px; border: 3px solid rgba(255, 255, 255, 0.2); border-top: 3px solid orange; border-radius: 50%; animation: spin 2s linear infinite; display: none;"></div>
+</div>
+   <style>
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+   </style>
+     
