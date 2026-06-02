@@ -1,61 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <link rel="stylesheet" href="./style.css">
-   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-   <link rel="manifest" href="manifest.json">
-    <meta charset="UTF-8">
-    <title>Grammify</title>
-    <link rel="icon" type="image/png" sizes="192x192" href="icon.png">
-    <link rel="apple-touch-icon" href="icon.png">
-</head>
+    <title>JAdownloader</title>
    <body>
-     <style>{
-       background:#blue;font:Montserrat;}</style>
-   <h1 style="color:#000000;background:white;padding:10px;border-radius:5px;display:inline;margin:10">GRAMM<span style="color:orange;">I</span>FY</h1>
-   <div id="question-box"
-   style="margin-bottom:20px;"></div>
-   
-   
-   <p style="color:#F8F8FF;font-size:25px;">Welcome to Grammify &#128075; 
-</p>
-     <img src="Anto.jpeg" style="width:47%; display:block;margin:20px auto;height:200px;border-radius:10px;float:left">
-     <img src="Syno.jpeg" style="float:right;width:47%;display:block;height:200px;margin:20px auto;border-radius:10px">
-     <img src="200.jpeg" style="float:left;width:46%;height:200px;display:block;margin:3px;border-radius:10px">
-     <img src="img.jpeg"style="float:left; width:49%;height:200px;display:block;margin:3px; border-radius:10px;">
-      <div style="display: flex; align-items: center; justify-content: center; gap: 10px; position: fixed; bottom: 20px; width: 100%;">
-    <button onclick="document.getElementById('loader1').style.display = 'block'; setTimeout(() => { window.location.href='100.html' }, 2000);" style="background: orange; color: #1a2b4c; padding: 15px; border-radius: 10px; border: none;box-shadow:0 3px 0 gray; position:fixed;bottom:60px; font-weight: bold; cursor: pointer;">PLAY GAME-></button>
-    <div id="loader1" style="width: 18px; height: 18px; border: 3px solid rgba(255, 255, 255, 0.2); border-top: 3px solid orange; border-radius: 50%; animation: spin 2s linear infinite; display: none;"></div>
- </div>
-<style>
-.button{
-  background:#FF8C00;
-  color:black;
-  border:2px solid gray;
-  padding: 10px 18px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 16px;
-  display: block;
-  margin:0 auto;
-}
-
-.loader{
-  width: 14px;
-  height: 14px;
-  border: 2px solid white;
-  border-top: 2px solid transparent;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin{
-  100%{
-    transform: rotate(360deg);
-  }
+     <div class="glowing-text">
+     <h1>JAdownloader</h1>
+     </div>
+     <style>
+     .glowing-text {
+  color: purple; /* White text looks best with a purple glow */
+  
+  /* The Glow: x-offset, y-offset, blur-radius, color */
+  text-shadow: 0 0 10px pink, 0 0 20px #9b30ff, 0 0 30px pink;
 }
 </style>
+<p class="gradient-text">created by Jeremiah Akpabio</p>
+<style>
+  .gradient-text {
+    background: linear-gradient(to right, purple,pink);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold; /* Optional: makes the gradient easier to see */
+}
 
-     
+</style>
+<p class="gradient-text">JAdownloader, A website created to install softwares that were made by J.A.This website is only for JA-Applications or JA-verified applications</p>
+<div class="highlight-bg">
+  <h2>JAdownloader</h2>
+</div>
+</body>
+<body >
+<style>
+.highlight-bg {
+    background-color: #C71585; /* This is the Medium Violet-Red color */
+    A website for Installing Applications
+    display: block;     /* Keeps the background tight to the text */
+    padding:10px;       /* Adds space around the text */
+    text-align: center;
+    border-radius: 8px;        /* Makes the corners rounded */
+}
+
+/* Ensure the text inside remains readable */
+.highlight-bg h1{
+    color: purple;              /* White text looks best on this dark pink/purple */
+    margin: 0;                 /* Removes default spacing */
+    text-align: center;
+}
+
+h2{
+  animation: blink-background 20s infinite; text-align:center; color:purple; text-shadow: 0 0 10px pink, 0 0 20px #9b30ff, 0 0 30px pink;
+}
+</style>
+  <p style=" font-weight: bold;
+    font-size: 20px;
+    color:purple;">GRAMMIFY</p>
+  <a href="31002.png" download="my-image.png" class="pulse-size-button">
+  Install
+</a>
+<button id="installBtn" style="display: none;">Install App</button>
+<script>
+let deferredPrompt;
+const installBtn = document.getElementById('installBtn');
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  // Prevent browser's default install prompt
+  e.preventDefault();
+  // Save the event so it can be triggered later
+  deferredPrompt = e;
+  // Show your button
+  installBtn.style.display = 'block';
+});
+
+installBtn.addEventListener('click', () => {
+  if (deferredPrompt) {
+    deferredPrompt.prompt(); // Show the browser's install dialog
+    deferredPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome === 'accepted') {
+        console.log('User accepted the install');
+      }
+      deferredPrompt = null;
+    });
+  }
+});
+</script>
