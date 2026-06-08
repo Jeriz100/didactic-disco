@@ -1,11 +1,10 @@
 const CACHE_NAME = 'pwa-quiz-v1';
 const ASSETS = [
   './',
-  './index.html', // Change this if your HTML file has a different name
-  // Add paths to your CSS, main JS, or music files here, for example:
-  // './style.css',
-  // './app.js',
-  // './music.mp3' 
+  './index.html', 
+  './games.html',
+   './manifest.json',
+   './ef0eec5.m4a' 
 ];
 
 // 1. Install Event: Cache all the essential static assets
