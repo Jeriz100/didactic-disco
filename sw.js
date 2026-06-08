@@ -3,8 +3,9 @@ const ASSETS = [
   './',
   './index.html', 
   './games.html',
+     './ef0eec5.m4a',
    './manifest.json',
-   './ef0eec5.m4a' 
+   './sw.js',
 ];
 
 // 1. Install Event: Cache all the essential static assets
